@@ -9,12 +9,12 @@ public class AverageDriver {
 public static void main(String[] args) throws Exception {
 if (args.length != 2) {
 
-System.err.println(&quot;Please Enter the input and output parameters&quot;);
+System.err.println("Please Enter the input and output parameters");
 System.exit(-1);
 }
 Job job = new Job();
 job.setJarByClass(AverageDriver.class);
-job.setJobName(&quot;Max temperature&quot;);
+job.setJobName("Max temperature");
 FileInputFormat.addInputPath(job, new Path(args[0]));
 FileOutputFormat.setOutputPath(job, new Path(args[1]));
 job.setMapperClass(AverageMapper.class);
